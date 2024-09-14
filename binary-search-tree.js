@@ -31,7 +31,14 @@ class BinarySearchTree {
       if (currentNode.left === null){
         currentNode.left = leftNode;
       }
+    }
 
+    if (val > currentNode.val){
+      let rightNode = this.insert(val, currentNode.right);
+
+      if (currentNode.right === null){
+        currentNode.right = rightNode;
+      }
     }
 
 
